@@ -1,5 +1,5 @@
 {
-  "name": "SocialExpo",
-  "description": "A high-fidelity social media app built with React Native and Expo.",
+  "name": "TheAtelier",
+  "description": "A research workspace app for managing papers, notebooks, and projects — built with React Native and Expo.",
   "requestFramePermissions": []
 }
