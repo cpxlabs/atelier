@@ -3,7 +3,11 @@ import { View, Text, TouchableOpacity } from 'react-native';
 import { Menu, Globe, ChevronDown, Settings } from 'lucide-react-native';
 import { styles, colors } from '../styles';
 
-export const Header: React.FC = () => (
+interface HeaderProps {
+  onSettingsPress?: () => void;
+}
+
+export const Header: React.FC<HeaderProps> = ({ onSettingsPress }) => (
   <View style={styles.header}>
     <View style={styles.headerLeft}>
       <TouchableOpacity style={styles.hamburger}>
@@ -17,7 +21,7 @@ export const Header: React.FC = () => (
         <Text style={styles.langText}>EN</Text>
         <ChevronDown size={14} color={colors.secondary} />
       </TouchableOpacity>
-      <TouchableOpacity>
+      <TouchableOpacity onPress={onSettingsPress}>
         <Settings size={20} color={colors.secondary} />
       </TouchableOpacity>
     </View>

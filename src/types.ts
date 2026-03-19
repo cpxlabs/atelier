@@ -23,3 +23,31 @@ export interface NotebookItem {
   modified: string;
   color: string;
 }
+
+export interface ThemeColors {
+  background: string;
+  surface: string;
+  surfaceLight: string;
+  primary: string;
+  secondary: string;
+  accent: string;
+  accentLight: string;
+  muted: string;
+  border: string;
+  white: string;
+  black: string;
+}
+
+export interface Theme {
+  id: string;
+  name: string;
+  mode: 'light' | 'dark';
+  colors: ThemeColors;
+  preview: { dot1: string; dot2: string };
+}
+
+export interface InterfaceDynamics {
+  autoFocusMode: boolean;
+  typographyScaling: number; // 0 = Compact, 1 = Standard
+  academicAccents: boolean;
+}
