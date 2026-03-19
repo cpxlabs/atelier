@@ -10,6 +10,7 @@ import { PostProps } from './src/types';
 
 const FEED_POSTS: PostProps[] = [
   {
+    id: '1',
     user: 'Alex Rivers',
     content: 'Just finished a long hike! The view from the top was absolutely breathtaking. 🏔️',
     image: 'https://picsum.photos/seed/hike/800/600',
@@ -17,12 +18,14 @@ const FEED_POSTS: PostProps[] = [
     comments: '42',
   },
   {
+    id: '2',
     user: 'Jordan Smith',
     content: 'Working on a new project today. Can\'t wait to share it with everyone! 💻✨',
     likes: '850',
     comments: '12',
   },
   {
+    id: '3',
     user: 'Taylor Swift',
     content: 'Coffee and code. The perfect morning. ☕👨‍💻',
     image: 'https://picsum.photos/seed/coffee/800/600',
@@ -39,7 +42,7 @@ export default function App() {
       <ScrollView style={styles.content} showsVerticalScrollIndicator={false}>
         <Stories />
         {FEED_POSTS.map((post) => (
-          <Post key={post.user} {...post} />
+          <Post key={post.id} {...post} />
         ))}
       </ScrollView>
       <BottomNav />
