@@ -1,6 +1,6 @@
 import React from 'react';
 import { View, Text, TouchableOpacity } from 'react-native';
-import { BookOpen, BookMarked, StickyNote, Plus } from 'lucide-react-native';
+import { BookOpen, BookMarked, FlaskConical, StickyNote, Plus } from 'lucide-react-native';
 import { styles, colors } from '../styles';
 
 export const BottomNav: React.FC = () => (
@@ -14,7 +14,7 @@ export const BottomNav: React.FC = () => (
       <Text style={[styles.navLabel, styles.navLabelInactive]}>Reader</Text>
     </TouchableOpacity>
     <TouchableOpacity style={styles.navItem}>
-      <StickyNote size={22} color={colors.muted} />
+      <FlaskConical size={22} color={colors.muted} />
       <Text style={[styles.navLabel, styles.navLabelInactive]}>Bench</Text>
     </TouchableOpacity>
     <TouchableOpacity style={styles.fabButton}>
