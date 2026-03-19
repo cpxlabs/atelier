@@ -1,17 +1,24 @@
 import React from 'react';
 import { View, Text, TouchableOpacity } from 'react-native';
-import { Search, Bell } from 'lucide-react-native';
-import { styles } from '../styles';
+import { Menu, Globe, ChevronDown, Settings } from 'lucide-react-native';
+import { styles, colors } from '../styles';
 
 export const Header: React.FC = () => (
   <View style={styles.header}>
-    <Text style={styles.logo}>SocialApp</Text>
-    <View style={styles.headerIcons}>
-      <TouchableOpacity style={styles.iconButton}>
-        <Search size={24} color="#000" />
+    <View style={styles.headerLeft}>
+      <TouchableOpacity style={styles.hamburger}>
+        <Menu size={22} color={colors.black} />
       </TouchableOpacity>
-      <TouchableOpacity style={styles.iconButton}>
-        <Bell size={24} color="#000" />
+      <Text style={styles.logo}>The Atelier</Text>
+    </View>
+    <View style={styles.headerRight}>
+      <TouchableOpacity style={styles.langPill}>
+        <Globe size={16} color={colors.secondary} />
+        <Text style={styles.langText}>EN</Text>
+        <ChevronDown size={14} color={colors.secondary} />
+      </TouchableOpacity>
+      <TouchableOpacity>
+        <Settings size={20} color={colors.secondary} />
       </TouchableOpacity>
     </View>
   </View>
