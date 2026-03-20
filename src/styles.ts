@@ -51,6 +51,9 @@ export const styles = StyleSheet.create({
     flexDirection: 'row',
     alignItems: 'center',
   },
+  headerAction: {
+    marginRight: 18,
+  },
   langPill: {
     flexDirection: 'row',
     alignItems: 'center',

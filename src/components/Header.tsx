@@ -19,10 +19,10 @@ export const Header: React.FC<HeaderProps> = ({ variant = 'default', onSettingsP
     <View style={styles.headerRight}>
       {variant === 'reader' ? (
         <>
-          <TouchableOpacity style={{ marginRight: 18 }}>
+          <TouchableOpacity style={styles.headerAction}>
             <History size={20} color={colors.secondary} />
           </TouchableOpacity>
-          <TouchableOpacity style={{ marginRight: 18 }}>
+          <TouchableOpacity style={styles.headerAction}>
             <Share2 size={20} color={colors.secondary} />
           </TouchableOpacity>
           <TouchableOpacity onPress={onSettingsPress}>
