@@ -1,9 +1,9 @@
 import React from 'react';
 import { View, Text, TouchableOpacity } from 'react-native';
-import { BookOpen, BookMarked, FlaskConical, StickyNote, Plus, User } from 'lucide-react-native';
+import { BookOpen, BookMarked, FlaskConical, Plus, User } from 'lucide-react-native';
 import { styles, colors } from '../styles';
 
-export type NavTab = 'library' | 'reader' | 'bench' | 'notes' | 'profile';
+export type NavTab = 'library' | 'reader' | 'bench' | 'profile';
 
 interface BottomNavProps {
   activeTab?: NavTab;
@@ -34,12 +34,6 @@ export const BottomNav: React.FC<BottomNavProps> = ({
         <FlaskConical size={22} color={isActive('bench') ? colors.black : colors.muted} />
         <Text style={[styles.navLabel, isActive('bench') ? styles.navLabelActive : styles.navLabelInactive]}>
           Bench
-        </Text>
-      </TouchableOpacity>
-      <TouchableOpacity style={styles.navItem} onPress={() => onTabPress?.('notes')}>
-        <StickyNote size={22} color={isActive('notes') ? colors.black : colors.muted} />
-        <Text style={[styles.navLabel, isActive('notes') ? styles.navLabelActive : styles.navLabelInactive]}>
-          Notes
         </Text>
       </TouchableOpacity>
       <TouchableOpacity style={styles.navItem} onPress={() => onTabPress?.('profile')}>
