@@ -8,6 +8,7 @@ import { ActiveNotebooks } from './src/components/ActiveNotebooks';
 import { BottomNav, NavTab } from './src/components/BottomNav';
 import { ThemeScreen } from './src/components/ThemeScreen';
 import { ProfileScreen } from './src/components/ProfileScreen';
+import { ReaderScreen } from './src/components/ReaderScreen';
 import { styles } from './src/styles';
 import { useTheme } from './src/hooks/useTheme';
 
@@ -26,6 +27,10 @@ export default function App() {
   const renderContent = () => {
     if (activeTab === 'profile') {
       return <ProfileScreen />;
+    }
+
+    if (activeTab === 'reader') {
+      return <ReaderScreen />;
     }
 
     if (showThemeScreen) {
@@ -51,12 +56,15 @@ export default function App() {
   return (
     <SafeAreaView style={styles.container}>
       <ExpoStatusBar style="dark" />
-      <Header onSettingsPress={() => {
-        if (activeTab !== 'library') {
-          setActiveTab('library');
-        }
-        setShowThemeScreen((v) => !v);
-      }} />
+      <Header
+        variant={activeTab === 'reader' ? 'reader' : 'default'}
+        onSettingsPress={() => {
+          if (activeTab !== 'library') {
+            setActiveTab('library');
+          }
+          setShowThemeScreen((v) => !v);
+        }}
+      />
       {renderContent()}
       <BottomNav activeTab={activeTab} onTabPress={handleTabPress} />
     </SafeAreaView>
