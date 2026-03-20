@@ -842,6 +842,98 @@ export const styles = StyleSheet.create({
     textTransform: 'uppercase',
   },
 
+  /* ── Bench Screen ── */
+  benchSourceContent: {
+    paddingHorizontal: 20,
+    paddingTop: 20,
+    paddingBottom: 16,
+  },
+  benchMeta: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    marginBottom: 18,
+  },
+  benchBadge: {
+    backgroundColor: colors.surfaceLight,
+    borderRadius: 4,
+    paddingHorizontal: 10,
+    paddingVertical: 4,
+    marginRight: 12,
+    borderWidth: 1,
+    borderColor: colors.border,
+  },
+  benchBadgeText: {
+    fontSize: 11,
+    fontWeight: '700',
+    color: colors.secondary,
+    letterSpacing: 0.8,
+    textTransform: 'uppercase',
+  },
+  benchPage: {
+    fontSize: 13,
+    color: colors.secondary,
+  },
+  benchTitle: {
+    fontSize: 32,
+    fontWeight: '800',
+    color: colors.black,
+    lineHeight: 40,
+    letterSpacing: -0.6,
+    marginBottom: 18,
+  },
+  benchEpigraph: {
+    fontSize: 17,
+    fontStyle: 'italic',
+    color: colors.secondary,
+    lineHeight: 26,
+    marginBottom: 20,
+  },
+  benchBody: {
+    fontSize: 17,
+    color: colors.primary,
+    lineHeight: 28,
+  },
+  benchReflections: {
+    backgroundColor: colors.white,
+    borderLeftWidth: 4,
+    borderLeftColor: colors.accent,
+    paddingHorizontal: 20,
+    paddingTop: 16,
+    paddingBottom: 24,
+    height: 300,
+    shadowColor: '#000',
+    shadowOffset: { width: 0, height: -3 },
+    shadowOpacity: 0.06,
+    shadowRadius: 8,
+    elevation: 5,
+  },
+  benchReflectionsHeader: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'space-between',
+    marginBottom: 14,
+  },
+  benchReflectionsLabel: {
+    fontSize: 11,
+    fontWeight: '700',
+    letterSpacing: 1.5,
+    color: colors.accent,
+    textTransform: 'uppercase',
+  },
+  benchToolbar: {
+    flexDirection: 'row',
+    alignItems: 'center',
+  },
+  benchToolbarBtn: {
+    marginRight: 18,
+  },
+  benchNotesInput: {
+    fontSize: 18,
+    color: colors.primary,
+    lineHeight: 28,
+    flex: 1,
+  },
+
   /* ── Deactivate Account ── */
   profileDeactivateCard: {
     backgroundColor: '#fdf2f2',

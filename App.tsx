@@ -9,6 +9,7 @@ import { BottomNav, NavTab } from './src/components/BottomNav';
 import { ThemeScreen } from './src/components/ThemeScreen';
 import { ProfileScreen } from './src/components/ProfileScreen';
 import { ReaderScreen } from './src/components/ReaderScreen';
+import { BenchScreen } from './src/components/BenchScreen';
 import { styles } from './src/styles';
 import { useTheme } from './src/hooks/useTheme';
 
@@ -31,6 +32,10 @@ export default function App() {
 
     if (activeTab === 'reader') {
       return <ReaderScreen />;
+    }
+
+    if (activeTab === 'bench') {
+      return <BenchScreen />;
     }
 
     if (showThemeScreen) {
