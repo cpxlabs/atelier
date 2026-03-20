@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { View, Text, ScrollView, TouchableOpacity, Image } from 'react-native';
 import {
   Pencil,
@@ -10,6 +10,7 @@ import {
 } from 'lucide-react-native';
 import { styles, colors } from '../styles';
 import { UserProfile, EnvironmentSettings, DataManagement } from '../types';
+import { useConfigStore } from '../store/useConfigStore';
 
 // ── Toggle Switch (reusable) ───────────────────────────────────────────────────
 
@@ -36,12 +37,6 @@ const PROFILE: UserProfile = {
   email: 'a.vance@university.edu',
   avatarUrl: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=200&h=200&fit=crop&crop=face',
   badges: ['Pro Member', 'Verified Academic'],
-};
-
-const INITIAL_ENV: EnvironmentSettings = {
-  cloudSync: true,
-  offlineMode: false,
-  defaultPdfViewer: 'Atelier Focus Reader (Recommended)',
 };
 
 const DATA: DataManagement = {
@@ -212,10 +207,11 @@ const DeactivateAccountCard: React.FC = () => (
 type BooleanEnvKey = 'cloudSync' | 'offlineMode';
 
 export const ProfileScreen: React.FC = () => {
-  const [env, setEnv] = useState<EnvironmentSettings>(INITIAL_ENV);
+  const env = useConfigStore((s) => s.env);
+  const updateEnv = useConfigStore((s) => s.updateEnv);
 
   const handleEnvToggle = (key: BooleanEnvKey) => {
-    setEnv((prev) => ({ ...prev, [key]: !prev[key] }));
+    updateEnv({ [key]: !env[key] });
   };
 
   return (
