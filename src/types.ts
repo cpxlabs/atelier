@@ -51,3 +51,21 @@ export interface InterfaceDynamics {
   typographyScaling: number; // 0 = Compact, 1 = Standard
   academicAccents: boolean;
 }
+
+export interface UserProfile {
+  name: string;
+  title: string;
+  email: string;
+  avatarUrl?: string;
+  badges: string[];
+}
+
+export interface EnvironmentSettings {
+  cloudSync: boolean;
+  offlineMode: boolean;
+  defaultPdfViewer: string;
+}
+
+export interface DataManagement {
+  storageUsedGb: number;
+}
