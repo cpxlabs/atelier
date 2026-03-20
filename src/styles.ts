@@ -469,4 +469,238 @@ export const styles = StyleSheet.create({
     marginTop: -7,
     top: 0,
   },
+
+  /* ── Profile Screen ── */
+  profileAvatarContainer: {
+    alignItems: 'center',
+    marginTop: 24,
+    marginBottom: 20,
+  },
+  profileAvatarWrap: {
+    width: 120,
+    height: 120,
+    borderRadius: 60,
+    position: 'relative',
+  },
+  profileAvatar: {
+    width: 120,
+    height: 120,
+    borderRadius: 60,
+    backgroundColor: colors.surfaceLight,
+  },
+  profileAvatarEditBtn: {
+    position: 'absolute',
+    bottom: 0,
+    right: 0,
+    width: 36,
+    height: 36,
+    borderRadius: 18,
+    backgroundColor: colors.accent,
+    justifyContent: 'center',
+    alignItems: 'center',
+    borderWidth: 3,
+    borderColor: colors.background,
+  },
+  profileName: {
+    fontSize: 26,
+    fontWeight: '700',
+    color: colors.black,
+    textAlign: 'center',
+    marginBottom: 4,
+  },
+  profileTitle: {
+    fontSize: 15,
+    fontStyle: 'italic',
+    color: colors.secondary,
+    textAlign: 'center',
+    lineHeight: 22,
+    marginBottom: 14,
+    paddingHorizontal: 40,
+  },
+  profileBadgeRow: {
+    flexDirection: 'row',
+    justifyContent: 'center',
+    gap: 10,
+    marginBottom: 28,
+  },
+  profileBadge: {
+    borderWidth: 1.5,
+    borderRadius: 20,
+    paddingHorizontal: 14,
+    paddingVertical: 6,
+  },
+  profileBadgeText: {
+    fontSize: 11,
+    fontWeight: '700',
+    letterSpacing: 0.8,
+    textTransform: 'uppercase',
+  },
+
+  /* ── Profile Cards ── */
+  profileCard: {
+    backgroundColor: colors.white,
+    borderRadius: 16,
+    paddingHorizontal: 20,
+    paddingVertical: 22,
+    marginHorizontal: 20,
+    marginBottom: 16,
+    shadowColor: '#000',
+    shadowOffset: { width: 0, height: 1 },
+    shadowOpacity: 0.04,
+    shadowRadius: 6,
+    elevation: 1,
+  },
+  profileCardTitle: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    marginBottom: 20,
+  },
+  profileCardTitleIcon: {
+    marginRight: 10,
+  },
+  profileCardTitleText: {
+    fontSize: 18,
+    fontWeight: '700',
+    color: colors.black,
+  },
+
+  /* ── Credential Fields ── */
+  profileFieldLabel: {
+    fontSize: 11,
+    fontWeight: '700',
+    letterSpacing: 1,
+    color: colors.muted,
+    textTransform: 'uppercase',
+    marginBottom: 8,
+  },
+  profileFieldBox: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'space-between',
+    borderWidth: 1,
+    borderColor: colors.border,
+    borderRadius: 10,
+    paddingHorizontal: 14,
+    paddingVertical: 13,
+    marginBottom: 16,
+  },
+  profileFieldValue: {
+    fontSize: 15,
+    color: colors.black,
+    flex: 1,
+  },
+  profileFieldAction: {
+    fontSize: 14,
+    fontWeight: '600',
+    color: colors.accent,
+  },
+
+  /* ── Environment Section ── */
+  profileEnvRow: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'space-between',
+    paddingVertical: 14,
+  },
+  profileEnvTextWrap: {
+    flex: 1,
+    marginRight: 16,
+  },
+  profileEnvLabel: {
+    fontSize: 15,
+    fontWeight: '600',
+    color: colors.black,
+    marginBottom: 2,
+  },
+  profileEnvSublabel: {
+    fontSize: 12,
+    color: colors.secondary,
+  },
+  profileSelectBox: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'space-between',
+    borderWidth: 1,
+    borderColor: colors.border,
+    borderRadius: 10,
+    paddingHorizontal: 14,
+    paddingVertical: 13,
+    marginTop: 8,
+  },
+  profileSelectText: {
+    fontSize: 14,
+    color: colors.black,
+    flex: 1,
+  },
+
+  /* ── Data Management ── */
+  profileDataDesc: {
+    fontSize: 14,
+    color: colors.secondary,
+    lineHeight: 21,
+    marginBottom: 18,
+  },
+  profileDataBold: {
+    fontWeight: '700',
+    color: colors.black,
+  },
+  profileBtnPrimary: {
+    backgroundColor: colors.accent,
+    borderRadius: 10,
+    paddingVertical: 13,
+    paddingHorizontal: 20,
+    alignSelf: 'flex-start',
+    marginBottom: 10,
+  },
+  profileBtnPrimaryText: {
+    fontSize: 13,
+    fontWeight: '700',
+    color: colors.white,
+    letterSpacing: 0.8,
+    textTransform: 'uppercase',
+  },
+  profileBtnOutline: {
+    borderWidth: 1.5,
+    borderColor: colors.border,
+    borderRadius: 10,
+    paddingVertical: 12,
+    paddingHorizontal: 20,
+    alignSelf: 'flex-start',
+  },
+  profileBtnOutlineText: {
+    fontSize: 13,
+    fontWeight: '700',
+    color: colors.black,
+    letterSpacing: 0.8,
+    textTransform: 'uppercase',
+  },
+
+  /* ── Deactivate Account ── */
+  profileDeactivateCard: {
+    backgroundColor: '#fdf2f2',
+    borderRadius: 16,
+    paddingHorizontal: 20,
+    paddingVertical: 22,
+    marginHorizontal: 20,
+    marginBottom: 32,
+  },
+  profileDeactivateTitle: {
+    fontSize: 18,
+    fontWeight: '700',
+    color: '#c53030',
+    marginBottom: 8,
+  },
+  profileDeactivateDesc: {
+    fontSize: 14,
+    color: colors.secondary,
+    lineHeight: 21,
+    marginBottom: 16,
+  },
+  profileDeactivateBtn: {
+    fontSize: 13,
+    fontWeight: '700',
+    color: '#c53030',
+    letterSpacing: 0.8,
+    textTransform: 'uppercase',
+  },
 });

@@ -5,34 +5,60 @@ import { Header } from './src/components/Header';
 import { CategoryGrid } from './src/components/CategoryGrid';
 import { RecentLibrary } from './src/components/RecentLibrary';
 import { ActiveNotebooks } from './src/components/ActiveNotebooks';
-import { BottomNav } from './src/components/BottomNav';
+import { BottomNav, NavTab } from './src/components/BottomNav';
 import { ThemeScreen } from './src/components/ThemeScreen';
+import { ProfileScreen } from './src/components/ProfileScreen';
 import { styles } from './src/styles';
 import { useTheme } from './src/hooks/useTheme';
 
 export default function App() {
+  const [activeTab, setActiveTab] = useState<NavTab>('library');
   const [showThemeScreen, setShowThemeScreen] = useState(false);
   const { activeThemeId, setTheme, dynamics, updateDynamics } = useTheme();
 
-  return (
-    <SafeAreaView style={styles.container}>
-      <ExpoStatusBar style="dark" />
-      <Header onSettingsPress={() => setShowThemeScreen((v) => !v)} />
-      {showThemeScreen ? (
+  const handleTabPress = (tab: NavTab) => {
+    setActiveTab(tab);
+    if (tab !== 'library') {
+      setShowThemeScreen(false);
+    }
+  };
+
+  const renderContent = () => {
+    if (activeTab === 'profile') {
+      return <ProfileScreen />;
+    }
+
+    if (showThemeScreen) {
+      return (
         <ThemeScreen
           activeThemeId={activeThemeId}
           setTheme={setTheme}
           dynamics={dynamics}
           updateDynamics={updateDynamics}
         />
-      ) : (
-        <ScrollView style={styles.content} showsVerticalScrollIndicator={false}>
-          <CategoryGrid />
-          <RecentLibrary />
-          <ActiveNotebooks />
-        </ScrollView>
-      )}
-      <BottomNav />
+      );
+    }
+
+    return (
+      <ScrollView style={styles.content} showsVerticalScrollIndicator={false}>
+        <CategoryGrid />
+        <RecentLibrary />
+        <ActiveNotebooks />
+      </ScrollView>
+    );
+  };
+
+  return (
+    <SafeAreaView style={styles.container}>
+      <ExpoStatusBar style="dark" />
+      <Header onSettingsPress={() => {
+        if (activeTab !== 'library') {
+          setActiveTab('library');
+        }
+        setShowThemeScreen((v) => !v);
+      }} />
+      {renderContent()}
+      <BottomNav activeTab={activeTab} onTabPress={handleTabPress} />
     </SafeAreaView>
   );
 }
