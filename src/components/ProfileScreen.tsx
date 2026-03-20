@@ -122,7 +122,7 @@ const AccountCredentialsCard: React.FC = () => (
 
 interface EnvironmentCardProps {
   env: EnvironmentSettings;
-  onToggle: (key: keyof EnvironmentSettings) => void;
+  onToggle: (key: 'cloudSync' | 'offlineMode') => void;
 }
 
 const EnvironmentCard: React.FC<EnvironmentCardProps> = ({ env, onToggle }) => (
@@ -209,10 +209,12 @@ const DeactivateAccountCard: React.FC = () => (
 
 // ── Profile Screen ─────────────────────────────────────────────────────────────
 
+type BooleanEnvKey = 'cloudSync' | 'offlineMode';
+
 export const ProfileScreen: React.FC = () => {
   const [env, setEnv] = useState<EnvironmentSettings>(INITIAL_ENV);
 
-  const handleEnvToggle = (key: keyof EnvironmentSettings) => {
+  const handleEnvToggle = (key: BooleanEnvKey) => {
     setEnv((prev) => ({ ...prev, [key]: !prev[key] }));
   };
 

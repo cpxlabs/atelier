@@ -52,8 +52,10 @@ export default function App() {
     <SafeAreaView style={styles.container}>
       <ExpoStatusBar style="dark" />
       <Header onSettingsPress={() => {
+        if (activeTab !== 'library') {
+          setActiveTab('library');
+        }
         setShowThemeScreen((v) => !v);
-        setActiveTab('library');
       }} />
       {renderContent()}
       <BottomNav activeTab={activeTab} onTabPress={handleTabPress} />
