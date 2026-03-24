@@ -962,4 +962,170 @@ export const styles = StyleSheet.create({
     letterSpacing: 0.8,
     textTransform: 'uppercase',
   },
+
+  /* ── Notes Screen ── */
+  notesContainer: {
+    flex: 1,
+    backgroundColor: colors.background,
+  },
+  notesContent: {
+    paddingHorizontal: 20,
+    paddingTop: 24,
+    paddingBottom: 32,
+  },
+  notesHeaderRow: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignItems: 'flex-start',
+    marginBottom: 24,
+  },
+  notesHeading: {
+    fontSize: 32,
+    fontWeight: '800',
+    color: colors.black,
+    letterSpacing: -0.5,
+    marginBottom: 4,
+  },
+  notesSubtitle: {
+    fontSize: 14,
+    fontStyle: 'italic',
+    color: colors.secondary,
+  },
+  notesNewBtn: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    backgroundColor: colors.black,
+    borderRadius: 10,
+    paddingVertical: 10,
+    paddingHorizontal: 16,
+    gap: 6,
+  },
+  notesNewBtnText: {
+    fontSize: 13,
+    fontWeight: '700',
+    color: colors.white,
+    letterSpacing: 0.5,
+    textTransform: 'uppercase',
+  },
+  notesSectionHeader: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'space-between',
+    marginBottom: 12,
+    marginTop: 8,
+  },
+  notesSectionLabel: {
+    fontSize: 11,
+    fontWeight: '700',
+    letterSpacing: 1.2,
+    color: colors.muted,
+    textTransform: 'uppercase',
+  },
+  noteCard: {
+    backgroundColor: colors.white,
+    borderRadius: 14,
+    paddingHorizontal: 16,
+    paddingVertical: 14,
+    marginBottom: 10,
+    shadowColor: '#000',
+    shadowOffset: { width: 0, height: 1 },
+    shadowOpacity: 0.04,
+    shadowRadius: 6,
+    elevation: 1,
+  },
+  noteCardHeader: {
+    flexDirection: 'row',
+    alignItems: 'flex-start',
+  },
+  noteCardDot: {
+    width: 10,
+    height: 10,
+    borderRadius: 5,
+    marginRight: 12,
+    marginTop: 4,
+  },
+  noteCardInfo: {
+    flex: 1,
+  },
+  noteCardTitle: {
+    fontSize: 15,
+    fontWeight: '600',
+    color: colors.black,
+    marginBottom: 4,
+  },
+  noteCardPreview: {
+    fontSize: 13,
+    color: colors.secondary,
+    lineHeight: 19,
+  },
+  noteCardMeta: {
+    fontSize: 11,
+    color: colors.muted,
+    marginTop: 8,
+    marginLeft: 22,
+  },
+
+  /* ── Inline Style Extractions ── */
+  recentLibraryWrap: {
+    marginTop: 24,
+  },
+  recentLibrarySectionHeader: {
+    paddingHorizontal: 20,
+  },
+  sectionTitleNoMargin: {
+    marginBottom: 0,
+  },
+  activeNotebooksWrap: {
+    marginTop: 28,
+    paddingBottom: 24,
+  },
+  sectionNoTopMargin: {
+    marginTop: 0,
+  },
+  paperDecoEmoji: {
+    fontSize: 64,
+    opacity: 0.25,
+    color: '#fff',
+  },
+  themeScreenScroll: {
+    flex: 1,
+    backgroundColor: colors.background,
+  },
+  themeScreenContent: {
+    paddingHorizontal: 20,
+    paddingTop: 24,
+    paddingBottom: 32,
+  },
+  profileScreenScroll: {
+    flex: 1,
+    backgroundColor: colors.background,
+  },
+  profileScreenContent: {
+    paddingBottom: 32,
+  },
+  benchScreenContainer: {
+    flex: 1,
+    backgroundColor: colors.background,
+  },
+  readerScreenScroll: {
+    flex: 1,
+    backgroundColor: colors.background,
+  },
+  readerScreenContent: {
+    paddingBottom: 32,
+  },
+  dynamicsItemColumn: {
+    flexDirection: 'column',
+    alignItems: 'flex-start',
+  },
+  dynamicsItemTextFull: {
+    marginRight: 0,
+    marginBottom: 12,
+  },
+  profileFieldLabelSpaced: {
+    marginTop: 8,
+  },
+  benchBody2Spaced: {
+    marginTop: 20,
+  },
 });

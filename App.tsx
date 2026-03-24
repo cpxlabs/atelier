@@ -10,6 +10,7 @@ import { ThemeScreen } from './src/components/ThemeScreen';
 import { ProfileScreen } from './src/components/ProfileScreen';
 import { ReaderScreen } from './src/components/ReaderScreen';
 import { BenchScreen } from './src/components/BenchScreen';
+import { NotesScreen } from './src/components/NotesScreen';
 import { styles } from './src/styles';
 import { useTheme } from './src/hooks/useTheme';
 
@@ -36,6 +37,10 @@ export default function App() {
 
     if (activeTab === 'bench') {
       return <BenchScreen />;
+    }
+
+    if (activeTab === 'notes') {
+      return <NotesScreen />;
     }
 
     if (showThemeScreen) {

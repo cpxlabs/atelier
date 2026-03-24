@@ -149,8 +149,8 @@ const InterfaceDynamicsPanel: React.FC<DynamicsProps> = ({ dynamics, updateDynam
     <View style={styles.dynamicsDivider} />
 
     {/* Typography Scaling */}
-    <View style={[styles.dynamicsItem, { flexDirection: 'column', alignItems: 'flex-start' }]}>
-      <View style={[styles.dynamicsItemText, { marginRight: 0, marginBottom: 12 }]}>
+    <View style={[styles.dynamicsItem, styles.dynamicsItemColumn]}>
+      <View style={[styles.dynamicsItemText, styles.dynamicsItemTextFull]}>
         <Text style={styles.dynamicsItemTitle}>Typography Scaling</Text>
         <Text style={styles.dynamicsItemDesc}>
           Optimize the Newsreader serif size for digital reading.
@@ -194,8 +194,8 @@ export const ThemeScreen: React.FC<ThemeScreenProps> = ({
   updateDynamics,
 }) => (
   <ScrollView
-    style={{ flex: 1, backgroundColor: colors.background }}
-    contentContainerStyle={{ paddingHorizontal: 20, paddingTop: 24, paddingBottom: 32 }}
+    style={styles.themeScreenScroll}
+    contentContainerStyle={styles.themeScreenContent}
     showsVerticalScrollIndicator={false}
   >
     {/* Heading */}

@@ -43,7 +43,7 @@ const PaperCardView: React.FC<{ paper: PaperCard }> = ({ paper }) => (
         </Text>
       </View>
       {/* Abstract decorative element */}
-      <Text style={{ fontSize: 64, opacity: 0.25, color: '#fff' }}>📄</Text>
+      <Text style={styles.paperDecoEmoji}>📄</Text>
     </View>
     <View style={styles.paperBody}>
       <Text style={styles.paperTitle} numberOfLines={2}>
@@ -61,9 +61,9 @@ const PaperCardView: React.FC<{ paper: PaperCard }> = ({ paper }) => (
 );
 
 export const RecentLibrary: React.FC = () => (
-  <View style={{ marginTop: 24 }}>
-    <View style={[styles.sectionHeader, { paddingHorizontal: 20 }]}>
-      <Text style={[styles.sectionTitle, { marginBottom: 0 }]}>Recent Library</Text>
+  <View style={styles.recentLibraryWrap}>
+    <View style={[styles.sectionHeader, styles.recentLibrarySectionHeader]}>
+      <Text style={[styles.sectionTitle, styles.sectionTitleNoMargin]}>Recent Library</Text>
       <TouchableOpacity style={styles.viewAll}>
         <Text style={styles.viewAllText}>View Library</Text>
         <ArrowRight size={16} color={colors.accent} />

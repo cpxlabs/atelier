@@ -1,6 +1,6 @@
 import React from 'react';
 import { View, Text, TouchableOpacity } from 'react-native';
-import { BookOpen, BookMarked, FlaskConical, StickyNote, Plus, User } from 'lucide-react-native';
+import { BookOpen, BookMarked, FlaskConical, StickyNote, User } from 'lucide-react-native';
 import { styles, colors } from '../styles';
 
 export type NavTab = 'library' | 'reader' | 'bench' | 'notes' | 'profile';

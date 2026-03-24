@@ -29,8 +29,8 @@ const NOTEBOOKS: NotebookItem[] = [
 ];
 
 export const ActiveNotebooks: React.FC = () => (
-  <View style={{ marginTop: 28, paddingBottom: 24 }}>
-    <View style={[styles.section, { marginTop: 0 }]}>
+  <View style={styles.activeNotebooksWrap}>
+    <View style={[styles.section, styles.sectionNoTopMargin]}>
       <Text style={styles.sectionTitle}>Active Notebooks</Text>
     </View>
     {NOTEBOOKS.map((nb) => (

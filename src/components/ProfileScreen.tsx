@@ -154,7 +154,7 @@ const EnvironmentCard: React.FC<EnvironmentCardProps> = ({ env, onToggle }) => (
     </View>
 
     {/* Default PDF Viewer */}
-    <Text style={[styles.profileFieldLabel, { marginTop: 8 }]}>Default PDF Viewer</Text>
+    <Text style={[styles.profileFieldLabel, styles.profileFieldLabelSpaced]}>Default PDF Viewer</Text>
     <TouchableOpacity style={styles.profileSelectBox} activeOpacity={0.7}>
       <Text style={styles.profileSelectText}>{env.defaultPdfViewer}</Text>
       <ChevronDown size={18} color={colors.muted} />
@@ -216,8 +216,8 @@ export const ProfileScreen: React.FC = () => {
 
   return (
     <ScrollView
-      style={{ flex: 1, backgroundColor: colors.background }}
-      contentContainerStyle={{ paddingBottom: 32 }}
+      style={styles.profileScreenScroll}
+      contentContainerStyle={styles.profileScreenContent}
       showsVerticalScrollIndicator={false}
     >
       <AvatarSection />

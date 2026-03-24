@@ -37,7 +37,7 @@ const SourcePanel: React.FC = () => (
     <Text style={styles.benchTitle}>{SOURCE.title}</Text>
     <Text style={styles.benchEpigraph}>{SOURCE.epigraph}</Text>
     <Text style={styles.benchBody}>{SOURCE.body1}</Text>
-    <Text style={[styles.benchBody, { marginTop: 20 }]}>{SOURCE.body2}</Text>
+    <Text style={[styles.benchBody, styles.benchBody2Spaced]}>{SOURCE.body2}</Text>
   </ScrollView>
 );
 
@@ -85,7 +85,7 @@ export const BenchScreen: React.FC = () => {
   const [notes, setNotes] = useState(INITIAL_NOTES);
 
   return (
-    <View style={{ flex: 1, backgroundColor: colors.background }}>
+    <View style={styles.benchScreenContainer}>
       <SourcePanel />
       <ReflectionsPanel notes={notes} onChangeNotes={setNotes} />
     </View>

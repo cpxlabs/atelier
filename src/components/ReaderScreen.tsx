@@ -136,8 +136,8 @@ const BlocksPanel: React.FC = () => (
 
 export const ReaderScreen: React.FC = () => (
   <ScrollView
-    style={{ flex: 1, backgroundColor: colors.background }}
-    contentContainerStyle={{ paddingBottom: 32 }}
+    style={styles.readerScreenScroll}
+    contentContainerStyle={styles.readerScreenContent}
     showsVerticalScrollIndicator={false}
   >
     <View style={styles.readerContainer}>
