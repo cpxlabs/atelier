@@ -1,6 +1,6 @@
 import React from 'react';
 import { View, Text, TouchableOpacity } from 'react-native';
-import { Menu, Globe, ChevronDown, Settings, History, Share2 } from 'lucide-react-native';
+import { Globe, ChevronDown, Settings, History, Share2 } from 'lucide-react-native';
 import { styles, colors } from '../styles';
 
 interface HeaderProps {
@@ -11,9 +11,6 @@ interface HeaderProps {
 export const Header: React.FC<HeaderProps> = ({ variant = 'default', onSettingsPress }) => (
   <View style={styles.header}>
     <View style={styles.headerLeft}>
-      <TouchableOpacity style={styles.hamburger}>
-        <Menu size={22} color={colors.black} />
-      </TouchableOpacity>
       <Text style={styles.logo}>The Atelier</Text>
     </View>
     <View style={styles.headerRight}>
