@@ -48,14 +48,14 @@ const ALL_NOTES: NoteEntry[] = [
   {
     id: '5',
     title: 'Book Club: The Structure of Scientific Revolutions',
-    preview: "Kuhn\u2019s paradigm shift concept applied to modern ML research\u2026",
+    preview: "Kuhn’s paradigm shift concept applied to modern ML research…",
     modified: 'Modified 4d ago',
     color: '#6b9e9e',
   },
   {
     id: '6',
     title: 'Lab Meeting Agenda',
-    preview: "Discussion items for next Tuesday\u2019s session with the team\u2026",
+    preview: "Discussion items for next Tuesday’s session with the team…",
     modified: 'Modified 1w ago',
     color: '#7c6dab',
   },
